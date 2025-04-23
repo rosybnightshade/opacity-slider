@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dynamic Opacity Controller</title>
+    </head>
+    <body>
+        <label for="opacitySlider">Adjust Opacity</label>
+        <input type="range" id="opacitySlider" min="0" max="1" step="0.1" value="1" oninput="changeOpacity()">
+        <br>
+        <img src="image.png" id="sampleImage" alt="Placeholder Image" style="width: 400px; height: 300px">
+
+        <script>
+            function changeOpacity() {
+                var opacityValue = document.getElementById('opacitySlider').value;
+                var image = document.getElementById('sampleImage');
+                image.style.opacity = opacityValue;
+            }
+        </script>
+    </body>
+</html>
